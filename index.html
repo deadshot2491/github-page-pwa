@@ -26,9 +26,11 @@
           {scope: '/github-page-pwa/'}
         )
       }
-    document.addEventListener('ofs-update', (e) => { console.log(evt);
-                                               document.getElementById('ofs-update').innerText = evt;
-                                               }, false);
+    //Listen for the event
+    window.addEventListener("MyEventType", function(evt) {
+         //alert(evt.detail.test); //alerts "text"
+        document.getElementById('ofs-update').innerText = evt.detail.test;
+    }, false);
   </script>
   <script src="js/app.js"></script>
 </body>
