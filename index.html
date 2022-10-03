@@ -15,7 +15,10 @@
     <a href="https://deadshot2491.github.io/github-page-pwa/">https://github.com/codepo8/github-page-pwa/</a> and 
     to change the necessary settings to your needs.
   </p>
-  <a href="https://sunrise0781.etadirect.com/#screen=activity_list">Sunrise0781</a>
+  
+
+  <a href="https://sunrise0781.etadirect.com/#screen=activity_list">Sunrise0781 Activity list</a>
+  <p id="ofs-update" style="color: red;"></p>
   <script>
       if (navigator.serviceWorker) {
         navigator.serviceWorker.register (
@@ -23,6 +26,9 @@
           {scope: '/github-page-pwa/'}
         )
       }
+    document.addEventListener('ofs-update', (e) => { console.log(evt);
+                                               document.getElementById('ofs-update').innerText = evt;
+                                               }, false);
   </script>
   <script src="js/app.js"></script>
 </body>
